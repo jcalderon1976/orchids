@@ -1,7 +1,7 @@
 export default function ServicesHeader() {
     return (
       <div>
-        <section id="home" className="hero-section" style={{backgroundImage: "url('./src/assets/img/core-img/grid3.png')"}}>
+        <section id="home" className="hero-section" style={{backgroundImage: "url('img/core-img/grid3.png')"}}>
         {/* <!-- Divider --> */}
         <div className="divider"></div>
   
