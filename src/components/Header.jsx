@@ -48,7 +48,7 @@ export default function Header() {
                <div className="container header-div-container">
                   {/*  <!-- Navbar Brand --> */}
                   <Link className="navbar-brand" to="/">
-                     <img src="./src/assets/img/core-img/logo.png" alt="" />
+                     <img src="/img/core-img/logo.png" alt="" />
                   </Link>
 
                   {/*  <!-- Navbar Toggler --> */}

@@ -74,7 +74,7 @@ Fully bilingual in Spanish and English, we believe that technology is a powerful
                             <div className="col-12 col-lg-6">
                             {/*   <!-- About Video --> */}
                             <div className="about-video-content wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-                                <img src="./src/assets/img/bg-img/25.jpg" alt=""/>
+                                <img src="/img/bg-img/25.jpg" alt=""/>
 
                                 {/* {/* <!-- Play Video --> 
                                 <div className="play-video-btn video-btn" data-video="https://youtu.be/4GUFkrHvZdE">
