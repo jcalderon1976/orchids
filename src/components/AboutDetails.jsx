@@ -130,7 +130,7 @@ Fully bilingual in Spanish and English, we believe that technology is a powerful
                         <div className="team-two-card">
                             {/* <!-- Team Thumbnail --> */}
                             <div className="team-thumbnail">
-                                <img src="src/assets/img/bg-img/83.jpg" alt=""/>
+                                <img src="/img/bg-img/83.jpg" alt=""/>
                             </div>
                             {/* <!-- Team Member Info --> */}
                             <div className="team-member-info">
@@ -145,7 +145,7 @@ Fully bilingual in Spanish and English, we believe that technology is a powerful
                         <div className="team-two-card">
                             {/* <!-- Team Thumbnail --> */}
                             <div className="team-thumbnail">
-                                <img src="src/assets/img/bg-img/84.jpg" alt=""/>
+                                <img src="/img/bg-img/84.jpg" alt=""/>
                                 
                             </div>
                             {/* <!-- Team Member Info --> */}
@@ -161,7 +161,7 @@ Fully bilingual in Spanish and English, we believe that technology is a powerful
                         <div className="team-two-card">
                             {/* <!-- Team Thumbnail --> */}
                             <div className="team-thumbnail">
-                                <img src="src/assets/img/bg-img/85.jpg" alt=""/>
+                                <img src="/img/bg-img/85.jpg" alt=""/>
                                
                             </div>
                             {/* <!-- Team Member Info --> */}
@@ -177,7 +177,7 @@ Fully bilingual in Spanish and English, we believe that technology is a powerful
                         <div className="team-two-card">
                             {/* <!-- Team Thumbnail --> */}
                             <div className="team-thumbnail">
-                                <img src="src/assets/img/bg-img/86.jpg" alt=""/>
+                                <img src="/img/bg-img/86.jpg" alt=""/>
                                 
                             </div>
                             {/* <!-- Team Member Info --> */}

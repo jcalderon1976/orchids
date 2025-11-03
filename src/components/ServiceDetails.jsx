@@ -32,7 +32,7 @@ export default function ServicesHeader() {
                     <div className="row g-5 g-lg-4 g-xxl-5">
                         <div className="col-12 col-lg-8">
                         <div className="service-details-content">
-                            <img src="src/assets/img/bg-img/128.jpg" alt=""/>
+                            <img src="/img/bg-img/128.jpg" alt=""/>
                             <h2 className="display-5 fw-semibold">Web Development</h2>
                             <p>When an unknown printer took ar galley offer type year anddey scrambled make aewer specimen a book
                                 bethas survived not only five when anner year unknown printer eed little help from friend from time
@@ -87,10 +87,10 @@ export default function ServicesHeader() {
 
                             <div className="row g-4">
                                 <div className="col-6">
-                                    <img src="src/assets/img/bg-img/129.jpg" alt=""/>
+                                    <img src="/img/bg-img/129.jpg" alt=""/>
                                 </div>
                                 <div className="col-6">
-                                    <img src="src/assets/img/bg-img/130.jpg" alt=""/>
+                                    <img src="/img/bg-img/130.jpg" alt=""/>
                                 </div>
                             </div>
                             <p>When an unknown printer took ar galley offer type year anddey scrambled make aewer specimen a book
