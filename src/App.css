@@ -1,0 +1,84 @@
+
+.section-heading .sub-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  background: rgba(96, 31, 235, 0.1);
+  text-transform: capitalize;
+}
+.section-heading h2 {
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+@media only screen and (min-width:1200px) {
+  .section-heading p {
+    font-size: 18px;
+  }
+}
+.style-two .sub-title {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.header-div-container{
+  height: 100px !important;
+}
+
+.section-heading .sub-title {
+  border: 1px solid rgba(88, 91, 111, 0.08);
+  background: rgba(255, 255, 255, 0.1);
+  color: #F7F7FC;
+}
+.section-heading h2 {
+  color: #FFFFFF;
+}
+
+.section-heading .sub-title {
+  background: rgba(43, 77, 255, 0.1);
+  color: #0A165E;
+}
+
+.section-heading .sub-title {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(96, 31, 235, 0.1)), to(rgba(96, 31, 235, 0.1)));
+  background: linear-gradient(180deg, rgba(96, 31, 235, 0.1) 0%, rgba(96, 31, 235, 0.1) 100%);
+  color: #601FEB;
+}
+
+.section-heading .style-two .sub-title {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.navbar .navbar-brand {
+  margin-right: 2rem;
+  line-height: 1 !important;
+}
+@media only screen and (min-width:992px) {
+   .navbar .navbar-brand {
+    margin-right: 3rem;
+  }
+}
+@media only screen and (min-width:1200px) {
+   .navbar .navbar-brand {
+    margin-right: 3rem;
+  }
+}
+@media only screen and (min-width:1400px) {
+   .navbar .navbar-brand {
+    margin-right: 6rem;
+  }
+}
+
