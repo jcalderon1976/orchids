@@ -26,7 +26,7 @@ export default function ProcessSession() {
                     <div className="col-12 col-md-3">
                         <div className="process-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
                             <div className="process-thumb">
-                            <img src="src/assets/img/bg-img/13.jpg" alt=""/>
+                            <img src="/assets/img/bg-img/13.jpg" alt=""/>
                             <div className="number">1</div>
                             </div>
                             <div className="process-text">
@@ -40,7 +40,7 @@ export default function ProcessSession() {
                     <div className="col-12 col-md-3">
                         <div className="process-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
                             <div className="process-thumb">
-                            <img src="src/assets/img/bg-img/14.jpg" alt=""/>
+                            <img src="/assets/img/bg-img/14.jpg" alt=""/>
                             <div className="number">2</div>
                             </div>
                             <div className="process-text">
@@ -54,7 +54,7 @@ export default function ProcessSession() {
                     <div className="col-12 col-md-3">
                         <div className="process-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
                             <div className="process-thumb">
-                            <img src="src/assets/img/bg-img/15.jpg" alt=""/>
+                            <img src="/assets/img/bg-img/15.jpg" alt=""/>
                             <div className="number">3</div>
                             </div>
                             <div className="process-text">
@@ -68,7 +68,7 @@ export default function ProcessSession() {
                     <div className="col-12 col-md-3">
                         <div className="process-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1000ms">
                             <div className="process-thumb">
-                            <img src="src/assets/img/bg-img/15_5.jpg" alt=""/>
+                            <img src="/assets/img/bg-img/15_5.jpg" alt=""/>
                             <div className="number">4</div>
                             </div>
                             <div className="process-text">

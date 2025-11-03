@@ -54,11 +54,11 @@ export default function ServicesHeader() {
                <div className="col-12 col-sm-6 col-xl-4">
                   <div className="service-card">
                      <div className="shape">
-                        <img src="src/assets/img/core-img/shape7.png" alt=""/>
+                        <img src="/assets/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
                         <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
-                        <img src="src/assets/img/bg-img/34.png" alt=""/>
+                        <img src="/assets/img/bg-img/34.png" alt=""/>
                      </div>
                      <div className="service-content">
                         <h4 className="service-title">Artificial Intelligence & LLM</h4>
@@ -72,11 +72,11 @@ export default function ServicesHeader() {
                <div className="col-12 col-sm-6 col-xl-4">
                   <div className="service-card">
                      <div className="shape">
-                        <img src="src/assets/img/core-img/shape7.png" alt=""/>
+                        <img src="/assets/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
                         <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
-                        <img src="src/assets/img/bg-img/35.png" alt=""/>
+                        <img src="/assets/img/bg-img/35.png" alt=""/>
                      </div>
                      <div className="service-content">
                         <h4 className="service-title">Process & Workflow Automation</h4>
@@ -90,11 +90,11 @@ export default function ServicesHeader() {
                <div className="col-12 col-sm-6 col-xl-4">
                   <div className="service-card">
                      <div className="shape">
-                        <img src="src/assets/img/core-img/shape7.png" alt=""/>
+                        <img src="/assets/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
                         <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
-                        <img src="src/assets/img/bg-img/36.png" alt=""/>
+                        <img src="/assets/img/bg-img/36.png" alt=""/>
                      </div>
                      <div className="service-content">
                         <h4 className="service-title">UI/UX Design</h4>
@@ -108,11 +108,11 @@ export default function ServicesHeader() {
                <div className="col-12 col-sm-6 col-xl-4">
                   <div className="service-card">
                      <div className="shape">
-                        <img src="src/assets/img/core-img/shape7.png" alt=""/>
+                        <img src="/assets/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
                         <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
-                        <img src="src/assets/img/bg-img/91.png" alt=""/>
+                        <img src="/assets/img/bg-img/91.png" alt=""/>
                      </div>
                      <div className="service-content">
                         <h4 className="service-title">DIGITAL TRANSFORMATION</h4>
@@ -126,11 +126,11 @@ export default function ServicesHeader() {
                <div className="col-12 col-sm-6 col-xl-4">
                   <div className="service-card">
                      <div className="shape">
-                        <img src="src/assets/img/core-img/shape7.png" alt=""/>
+                        <img src="/assets/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
                         <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
-                        <img src="src/assets/img/bg-img/92.png" alt=""/>
+                        <img src="/assets/img/bg-img/92.png" alt=""/>
                      </div>
                      <div className="service-content">
                         <h4 className="service-title">Robotic Process Automation (RPA)</h4>
@@ -145,11 +145,11 @@ export default function ServicesHeader() {
                <div className="col-12 col-sm-6 col-xl-4">
                   <div className="service-card">
                      <div className="shape">
-                        <img src="src/assets/img/core-img/shape7.png" alt=""/>
+                        <img src="/assets/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
                         <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
-                        <img src="src/assets/img/bg-img/93.png" alt=""/>
+                        <img src="/assets/img/bg-img/93.png" alt=""/>
                      </div>
                      <div className="service-content">
                         <h4 className="service-title">ERP Implementation</h4>

@@ -161,7 +161,7 @@ export default function Contact() {
 
                         {/* <!-- Phone Number Card --> */}
                         <div className="phone-number-card mt-4">
-                            <img src="src/assets/img/bg-img/110.jpg" alt=""/>
+                            <img src="/assets/img/bg-img/110.jpg" alt=""/>
 
                             <div className="d-flex gap-2 align-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
