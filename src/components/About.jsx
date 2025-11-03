@@ -1,7 +1,7 @@
 export default function About() {
       return (
         <div>
-        <section id="about" className="about-section ">
+        <section id="about" className="about-section">
                 {/*   <!-- Right Shape --> */}
                 <div  className="right-shape">
                     <img  src="./src/assets/img/core-img/shape.png" alt=""/>

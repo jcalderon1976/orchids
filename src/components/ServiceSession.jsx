@@ -54,7 +54,7 @@ export default function ServiceSession() {
         <section className="service-section " >
       {/* <!-- Background Shape --> */}
       <div className="bg-shape">
-         <img src="/assets/img/core-img/shape2.png" alt=""/>
+         <img src="src/assets/img/core-img/shape2.png" alt=""/>
       </div>
 
       {/* <!-- Divider --> */}
@@ -99,7 +99,7 @@ export default function ServiceSession() {
                   <div className="tab-pane fade" id="v-pills-ai" role="tabpanel" aria-labelledby="v-pills-ai-tab">
                      {/* <!-- Service Tab Content --> */}
                      <div className="service-tab-content">
-                        <img src="/assets/img/bg-img/27.jpg" alt=""/>
+                        <img src="src/assets/img/bg-img/27.jpg" alt=""/>
 
                        {/*  <!-- Service Tab Card --> */}
                         <div className="service-tab-card">
@@ -121,7 +121,7 @@ export default function ServiceSession() {
                   <div className="tab-pane fade" id="v-pills-automation" role="tabpanel" aria-labelledby="v-pills-automation-tab">
                     {/*  <!-- Service Tab Content --> */}
                      <div className="service-tab-content">
-                        <img src="/assets/img/bg-img/27_2.jpg" alt=""/>
+                        <img src="src/assets/img/bg-img/27_2.jpg" alt=""/>
 
                        {/*  <!-- Service Tab Card --> */}
                        <div className="service-tab-card">
@@ -143,7 +143,7 @@ export default function ServiceSession() {
                   <div className="tab-pane fade" id="v-pills-solution" role="tabpanel" aria-labelledby="v-pills-solution-tab">
                     {/*  <!-- Service Tab Content --> */}
                      <div className="service-tab-content">
-                        <img src="/assets/img/bg-img/27_3.jpg" alt=""/>
+                        <img src="src/assets/img/bg-img/27_3.jpg" alt=""/>
 
                        {/*  <!-- Service Tab Card --> */}
                        <div className="service-tab-card">
@@ -164,7 +164,7 @@ export default function ServiceSession() {
                   <div className="tab-pane fade" id="v-pills-modernization" role="tabpanel" aria-labelledby="v-pills-modernization-tab">
                     {/*  <!-- Service Tab Content --> */}
                      <div className="service-tab-content">
-                        <img src="/assets/img/bg-img/27_4.jpg" alt=""/>
+                        <img src="src/assets/img/bg-img/27_4.jpg" alt=""/>
 
                        {/*  <!-- Service Tab Card --> */}
                         <div className="service-tab-card">

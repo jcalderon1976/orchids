@@ -14,7 +14,7 @@ export default function Operations() {
             <div className="col-12 col-sm-6 filter-item showcase-item">
                <div className="showcase-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
                   <div className="showcase-thumb">
-                     <img src="/assets/img/bg-img/16.jpg" alt=""/>
+                     <img src="src/assets/img/bg-img/16.jpg" alt=""/>
                      <a href="/services" className="btn"><i className="ti ti-arrow-up-right"></i></a>
                   </div>
                   <div className="showcase-content">
@@ -29,7 +29,7 @@ export default function Operations() {
             <div className="col-12 col-sm-6 filter-item showcase-item">
                <div className="showcase-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
                   <div className="showcase-thumb">
-                     <img src="/assets/img/bg-img/17.jpg" alt=""/>
+                     <img src="src/assets/img/bg-img/17.jpg" alt=""/>
                      <a href="/services" className="btn"><i className="ti ti-arrow-up-right"></i></a>
                   </div>
                   <div className="showcase-content">
@@ -46,7 +46,7 @@ export default function Operations() {
             <div className="col-12 col-sm-6 filter-item showcase-item">
                <div className="showcase-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
                   <div className="showcase-thumb">
-                     <img src="/assets/img/bg-img/18.jpg" alt=""/>
+                     <img src="src/assets/img/bg-img/18.jpg" alt=""/>
                      <a href="/services" className="btn"><i className="ti ti-arrow-up-right"></i></a>
                   </div>
                   <div className="showcase-content">
@@ -63,7 +63,7 @@ export default function Operations() {
             <div className="col-12 col-sm-6 filter-item showcase-item">
                <div className="showcase-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
                   <div className="showcase-thumb">
-                     <img src="/assets/img/bg-img/19.jpg" alt=""/>
+                     <img src="src/assets/img/bg-img/19.jpg" alt=""/>
                      <a href="/services" className="btn"><i className="ti ti-arrow-up-right"></i></a>
                   </div>
                   <div className="showcase-content">

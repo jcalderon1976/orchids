@@ -144,7 +144,7 @@ export default function Contact() {
             <section className="faq-wrapper bg-secondary">
                 {/* <!-- Background --> */}
                 <div className="bg-shape">
-                    <img src="assets/img/core-img/shape12.png" alt=""/>
+                    <img src="src/assets/img/core-img/shape12.png" alt=""/>
                 </div>
 
                 {/* <!-- Divider --> */}
@@ -161,7 +161,7 @@ export default function Contact() {
 
                         {/* <!-- Phone Number Card --> */}
                         <div className="phone-number-card mt-4">
-                            <img src="/assets/img/bg-img/110.jpg" alt=""/>
+                            <img src="src/assets/img/bg-img/110.jpg" alt=""/>
 
                             <div className="d-flex gap-2 align-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">

@@ -7,12 +7,6 @@ import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import Services from "./pages/Services.tsx";
 import ServiceDetails from "./pages/ServiceDetails.tsx";
-import "./assets/css/styles.css";
-import "./assets/css/animate.css";
-import "./assets/css/tabler-icons.min.css";
-import "./assets/css/bootstrap.min.css";
-import "./assets/css/swiper-bundle.min.css";
-import "./assets/css/tabler-icons.min.css";
 
 import "./index.css";
 

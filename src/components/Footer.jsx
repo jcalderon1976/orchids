@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="col-12 col-sm-6 col-lg-4">
                <div className="footer-card pe-lg-5">
                   <a href="#" className="d-block mb-4">
-                     <img src="/assets/img/core-img/logo.png" alt=""/>
+                     <img src="src/assets/img/core-img/logo.png" alt=""/>
                   </a>
                   <p className="mb-0">We can transform your ideas into robust and scalable digital realities. Experience and innovation in software development.
                   </p>

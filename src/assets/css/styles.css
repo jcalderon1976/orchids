@@ -2284,15 +2284,18 @@ picture.jarallax-img img {
   background-color: #222222;
 }
 
-.about-section {
-  position: relative;
-  z-index: 1;
+
+.about-section .right-shape {
+  opacity:0.4;
+  z-index: -10;
 }
-.about-section .right-shape > img {
+.about-section .right-shape  img {
   position: absolute;
   bottom: 20%;
   right: 0;
   z-index: -10;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about-thumbnail {
@@ -6983,7 +6986,7 @@ textarea.form-control {
   width: 100%;
   height: 100%;
   z-index: -10;
-  opacity: 0.04;
+  opacity: 0.2;
   text-align: right;
 }
 .faq-wrapper .bg-shape img {
