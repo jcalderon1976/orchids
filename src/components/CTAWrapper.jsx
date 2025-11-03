@@ -1,6 +1,6 @@
 export default function CTAWrapper() {
     return (
-        <div className="cta-wrapper bg-img" style={{backgroundImage: "url(src/assets/img/core-img/grid.jpg)"}}>
+        <div className="cta-wrapper bg-img" style={{backgroundImage: "url(/img/core-img/grid.jpg)"}}>
         {/*  <!-- Divider --> */}
          <div className="divider"></div>
    

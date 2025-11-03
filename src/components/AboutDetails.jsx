@@ -23,7 +23,7 @@ export default function AboutDetails() {
                 <br/>
                     {/*   <!-- Right Shape --> */}
                     <div  className="right-shape">
-                        <img  src="./src/assets/img/core-img/shape.png" alt=""/>
+                        <img  src="/img/core-img/shape.png" alt=""/>
                     </div>
 
                     <div className="container">
