@@ -2,7 +2,7 @@ export default function AboutDetails() {
       return (
         <div>
              {/* <!-- Breadcrumb Section -->*/}
-             <div className="breadcrumb-section bg-img" style={{backgroundImage: "url('src/assets/img/core-img/grid.jpg')"}}>
+             <div className="breadcrumb-section bg-img" style={{backgroundImage: "url('/img/core-img/grid.jpg')"}}>
                 <div className="container">
                     {/* <!-- Breadcrumb Content -->*/}
                     <div className="breadcrumb-content">
@@ -88,7 +88,7 @@ Fully bilingual in Spanish and English, we believe that technology is a powerful
                             <div className="about-images d-flex px-5 mt-5 wow fadeInUp" data-wow-duration="1000ms"
                                 data-wow-delay="800ms">
                                 <div>
-                                    <img className="w-100" src="./src/assets/img/bg-img/26.jpg" alt=""/>
+                                    <img className="w-100" src="/img/bg-img/26.jpg" alt=""/>
                                 </div>
                                 <div>
                                     <svg className="rotatingImage" xmlns="http://www.w3.org/2000/svg" width="70" height="70"

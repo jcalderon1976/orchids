@@ -39,7 +39,7 @@ export default function Contact() {
     return (
       <div>
             {/* <!-- Breadcrumb Section -->*/}
-            <div className="breadcrumb-section bg-img" style={{backgroundImage: "url('src/assets/img/core-img/grid.jpg')"}}>
+            <div className="breadcrumb-section bg-img" style={{backgroundImage: "url('/img/core-img/grid.jpg')"}}>
                 <div className="container">
                     {/* <!-- Breadcrumb Content -->*/}
                     <div className="breadcrumb-content">

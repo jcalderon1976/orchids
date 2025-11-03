@@ -66,7 +66,7 @@ export default function About() {
                         <div className="about-images d-flex px-5 mt-5 wow fadeInUp" data-wow-duration="1000ms"
                             data-wow-delay="800ms">
                             <div>
-                                <img className="w-100" src="./src/assets/img/bg-img/26.jpg" alt=""/>
+                                <img className="w-100" src="/img/bg-img/26.jpg" alt=""/>
                             </div>
                             <div>
                                 <svg className="rotatingImage" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
