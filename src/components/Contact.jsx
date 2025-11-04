@@ -1,46 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from 'react-router-dom';
-
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
 
     const [submitted, setSubmitted] = useState(false);
-    
-        
-      const handleSubmit = (e) => {
+    const form = useRef();
+    const sendEmail = (e) => {
         e.preventDefault();
-        const form = e.target;
-        const data = new FormData();
-        
-        // Obtener valores del formulario - usar los nombres que espera PHP
-        data.append('full-name', form.name.value || '');
-        data.append('phone-number', form.phone.value || '');
-        data.append('email', form.email.value || '');
-        data.append('message', form.message.value || '');
     
-        fetch('php/mailer.php', {
-          method: 'POST',
-          body: data
-        })
-          .then(response => {
-            return response.text().then(text => {
-              // Verificar el código de estado HTTP y el contenido de la respuesta
-              if (response.ok && (text.includes('Thank You') || text.includes('sent'))) {
-                setSubmitted(true);
-                form.reset(); // Limpiar el formulario después del envío exitoso
-              } else {
-                // Mostrar el mensaje de error del servidor
-                alert('Error: ' + text);
+        emailjs
+          .sendForm(
+            'service_ijss7vn',     // desde EmailJS dashboard
+            'template_oybc6q4',    // desde EmailJS dashboard
+            form.current,
+            'TbeH-_IoYW1Q5jfv4'      // desde EmailJS dashboard
+          )
+          .then(
+            (result) => {
+              console.log('Email enviado exitosamente:', result.text);
+              setSubmitted(true);
+              form.current.reset(); // Limpiar/resetear los campos del formulario
+              // Ocultar el mensaje de éxito después de 8 segundos
+              setTimeout(() => {
                 setSubmitted(false);
-              }
-            });
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            alert('Error sending message. Please try again.');
-            setSubmitted(false);
-          });
+              }, 8000);
+            },
+            (error) => {
+              console.error('Error al enviar email:', error);
+              alert('Failed to send ❌: ' + error.text);
+              setSubmitted(false);
+            }
+          );
       };
+        
+      
 
 
     return (
@@ -199,12 +193,12 @@ export default function Contact() {
                         </div>
 
                         {/* <!-- Contact Form --> */}
-                        <form  onSubmit={handleSubmit} className="faq-contact-form style-two" >
-                        {submitted && (
-                            <div className="alert alert-success" role="alert">
-                            Your message was sent successfully.
-                            </div>
-                        )}
+                        <form  ref={form} onSubmit={sendEmail} className="faq-contact-form style-two" >
+                            {submitted && (
+                                <div className="alert alert-success mb-4" role="alert" style={{display: 'block'}}>
+                                    <strong>¡Éxito!</strong> Your message was sent successfully.
+                                </div>
+                            )}
                             <div className="row g-4">
                                 <div className="col-12 col-lg-6">
                                     <div className="form-group">
