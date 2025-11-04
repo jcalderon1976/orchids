@@ -14,9 +14,9 @@ export default function Footer() {
            {/*  <!-- Footer Card --> */}
             <div className="col-12 col-sm-6 col-lg-4">
                <div className="footer-card pe-lg-5">
-                  <a href="#" className="d-block mb-4">
+                  <Link to="/" className="d-block mb-4">
                      <img src="/img/core-img/logo.png" alt=""/>
-                  </a>
+                  </Link>
                   <p className="mb-0">We can transform your ideas into robust and scalable digital realities. Experience and innovation in software development.
                   </p>
 
@@ -57,11 +57,11 @@ export default function Footer() {
 
                  {/*  <!-- Footer Nav --> */}
                   <ul className="footer-nav">
-                     <li><Link href="/services">Artificial Intelligence & LLM </Link></li>
-                     <li><Link href="/services">App Development</Link></li>
-                     <li><Link href="/services">Process & Workflow Automation</Link></li>
-                     <li><Link href="/services">UI/UX Design</Link></li>
-                     <li><Link href="/services">Digital Transformation</Link></li>
+                     <li><Link to="/services">Artificial Intelligence & LLM </Link></li>
+                     <li><Link to="/services">App Development</Link></li>
+                     <li><Link to="/services">Process & Workflow Automation</Link></li>
+                     <li><Link to="/services">UI/UX Design</Link></li>
+                     <li><Link to="/services">Digital Transformation</Link></li>
                   </ul>
                </div>
             </div>
@@ -80,7 +80,7 @@ export default function Footer() {
             <div className="row align-items-center">
                {/* <!-- Copyright --> */}
                <div className="col-12 col-md-6">
-                  <p className="mb-3 mb-md-0 copyright">Copyright © <span id="year">2025</span> <a href="#"> Orchid Technology</a>
+                  <p className="mb-3 mb-md-0 copyright">Copyright © <span id="year">2025</span> <Link to="/"> Orchid Technology</Link>
                      All
                      rights
                      reserved.</p>

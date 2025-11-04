@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 
 export default function Operations() {
     
@@ -15,7 +15,7 @@ export default function Operations() {
                <div className="showcase-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
                   <div className="showcase-thumb">
                      <img src="/img/bg-img/16.jpg" alt=""/>
-                     <a href="/services" className="btn"><i className="ti ti-arrow-up-right"></i></a>
+                     <Link to="/services" className="btn"><i className="ti ti-arrow-up-right"></i></Link>
                   </div>
                   <div className="showcase-content">
                      <h2>DIGITAL TRANSFORMATION</h2>
@@ -30,7 +30,7 @@ export default function Operations() {
                <div className="showcase-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
                   <div className="showcase-thumb">
                      <img src="/img/bg-img/17.jpg" alt=""/>
-                     <a href="/services" className="btn"><i className="ti ti-arrow-up-right"></i></a>
+                     <Link to="/services" className="btn"><i className="ti ti-arrow-up-right"></i></Link>
                   </div>
                   <div className="showcase-content">
                     
@@ -47,7 +47,7 @@ export default function Operations() {
                <div className="showcase-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
                   <div className="showcase-thumb">
                      <img src="/img/bg-img/18.jpg" alt=""/>
-                     <a href="/services" className="btn"><i className="ti ti-arrow-up-right"></i></a>
+                     <Link to="/services" className="btn"><i className="ti ti-arrow-up-right"></i></Link>
                   </div>
                   <div className="showcase-content">
                      
@@ -64,7 +64,7 @@ export default function Operations() {
                <div className="showcase-card wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
                   <div className="showcase-thumb">
                      <img src="/img/bg-img/19.jpg" alt=""/>
-                     <a href="/services" className="btn"><i className="ti ti-arrow-up-right"></i></a>
+                     <Link to="/services" className="btn"><i className="ti ti-arrow-up-right"></i></Link>
                   </div>
                   <div className="showcase-content">
                      

@@ -1,5 +1,4 @@
-
-
+import { Link } from 'react-router-dom';
 export default function ServicesHeader() {
     return (
       <div>
@@ -12,8 +11,8 @@ export default function ServicesHeader() {
                         <div className="divider"></div>
                         <h2>Service Details</h2>
                         <ul className="list-unstyled">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/services">Services</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/services">Services</Link></li>
                         <li>Service Details</li>
                         </ul>
                     </div>
@@ -105,12 +104,12 @@ export default function ServicesHeader() {
                             {/* <!-- All Service -->*/}
                             <div className="all-service-card">
                                 <ul className="p-0 list-unstyled">
-                                    <li><a href="#"><span>IT Strategy & Planning</span> <i className="ti ti-chevron-right"></i></a></li>
-                                    <li><a href="#"><span>Machine Learning</span> <i className="ti ti-chevron-right"></i></a></li>
-                                    <li><a href="#"><span>Cloud Consulting</span> <i className="ti ti-chevron-right"></i></a></li>
-                                    <li><a href="#"><span>Web Development</span> <i className="ti ti-chevron-right"></i></a></li>
-                                    <li><a href="#"><span>Database Security</span> <i className="ti ti-chevron-right"></i></a></li>
-                                    <li><a href="#"><span>IT Management</span> <i className="ti ti-chevron-right"></i></a></li>
+                                    <li><Link to="/services"><span>IT Strategy & Planning</span> <i className="ti ti-chevron-right"></i></Link></li>
+                                    <li><Link to="/services"><span>Machine Learning</span> <i className="ti ti-chevron-right"></i></Link></li>
+                                    <li><Link to="/services"><span>Cloud Consulting</span> <i className="ti ti-chevron-right"></i></Link></li>
+                                    <li><Link to="/services"><span>Web Development</span> <i className="ti ti-chevron-right"></i></Link></li>
+                                    <li><Link to="/services"><span>Database Security</span> <i className="ti ti-chevron-right"></i></Link></li>
+                                    <li><Link to="/services"><span>IT Management</span> <i className="ti ti-chevron-right"></i></Link></li>
                                 </ul>
                             </div>
 

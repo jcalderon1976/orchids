@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 export default function Contact() {
@@ -46,7 +47,7 @@ export default function Contact() {
                         <div className="divider"></div>
                         <h2>Discover how Orchid Technology can help accelerate your operational transformation!</h2>
                         <ul className="list-unstyled">
-                        <li><a href="/">Home</a></li>
+                        <li><Link to="/">Home</Link></li>
                         <li>Contact Us</li>
                        
                         </ul>

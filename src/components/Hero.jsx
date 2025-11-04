@@ -21,8 +21,8 @@ export default function Hero() {
                    At Orchid Technology,  we build scalable, flexible, secure, and AI-driven solutions that empower enterprises to grow faster and smarter.
                    We are dedicated transforming your digital aspirations into reality. With a passion for innovation and a commitment to excellence.
                     </p>
-                    <Link className="btn border-2 btn-outline-light wow fadeInUp" data-wow-duration="1000ms"
-                       data-wow-delay="800ms" href="/services">Our Services <i className="ti ti-arrow-up-right"></i></Link>
+                    <Link to="/services" className="btn border-2 btn-outline-light wow fadeInUp" data-wow-duration="1000ms"
+                       data-wow-delay="800ms" >Our Services <i className="ti ti-arrow-up-right"></i></Link>
                  </div>
               </div>
            </div>

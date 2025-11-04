@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function CookieAlert() {
   const [show, setShow] = useState(false)
@@ -53,7 +54,7 @@ export default function CookieAlert() {
     <div className="cookiealert shadow-lg show">
       <p className="mb-4">We use cookies for the best experience on our website, for social media features and to anal
         traffic. accepting
-        you agree to our use of cookies. Read <a href="#" target="_blank"> Cookies Policy.</a></p>
+        you agree to our use of cookies. Read <Link to="/" target="_blank"> Cookies Policy.</Link></p>
       <button className="btn btn-primary btn-sm acceptcookies" type="button" aria-label="Close" onClick={handleAccept}>Accept</button>
     </div>
   )

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function AboutDetails() {
       return (
         <div>
@@ -9,8 +10,8 @@ export default function AboutDetails() {
                         <div className="divider"></div>
                         <h2>Every great design begin with an even better story</h2>
                         <ul className="list-unstyled">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="#">About Us</Link></li>
                         
                         </ul>
                     </div>
@@ -37,10 +38,10 @@ export default function AboutDetails() {
                                     <p className="mb-5">Regardless of your industry, we empower your organization to accelerate growth and prepare teams for the future. 
                                         Our expertise helps you streamline key operations, enhance agility, and adopt innovative technologies—unlocking greater value and maximizing 
                                         your return on investment.</p>
-                                    <p className="mb-5">We are a team driven by a passion for technology, with a strong foundation in Software Engineering, Database Administration, and Systems Analysis.
-We specialize in designing and developing scalable, reliable solutions using agile methodologies and modern tools.
-Throughout our experience, we have led complex projects across diverse corporate environments, consistently ensuring quality, innovation, and measurable outcomes.
-Fully bilingual in Spanish and English, we believe that technology is a powerful catalyst for transformation and efficiency across all industries.</p>
+                                    <p className="mb-5">We are a team driven by a passion for technology, with a strong foundation in Software Engineering, Database Administration, 
+                                        and Systems Analysis. We specialize in designing and developing scalable, reliable solutions using agile methodologies and modern tools.
+                                        Throughout our experience, we have led complex projects across diverse corporate environments, consistently ensuring quality, innovation, and measurable outcomes.
+                                        Fully bilingual in Spanish and English, we believe that technology is a powerful catalyst for transformation and efficiency across all industries.</p>
 
                                     {/*  <!-- About List --> */}
                                     <ul className="about-list ps-0 d-flex flex-column gap-3 list-unstyled mb-5">

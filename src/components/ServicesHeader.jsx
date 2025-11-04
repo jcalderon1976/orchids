@@ -57,7 +57,7 @@ export default function ServicesHeader() {
                         <img src="/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
-                        <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
+                        <Link to="/services" className="btn">Learn More <i className="ti ti-arrow-right"></i></Link>
                         <img src="/img/bg-img/34.png" alt=""/>
                      </div>
                      <div className="service-content">
@@ -75,7 +75,7 @@ export default function ServicesHeader() {
                         <img src="/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
-                        <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
+                        <Link to="/services" className="btn">Learn More <i className="ti ti-arrow-right"></i></Link>
                         <img src="/img/bg-img/35.png" alt=""/>
                      </div>
                      <div className="service-content">
@@ -93,7 +93,7 @@ export default function ServicesHeader() {
                         <img src="/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
-                        <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
+                        <Link to="/services" className="btn">Learn More <i className="ti ti-arrow-right"></i></Link>
                         <img src="/img/bg-img/36.png" alt=""/>
                      </div>
                      <div className="service-content">
@@ -111,7 +111,7 @@ export default function ServicesHeader() {
                         <img src="/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
-                        <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
+                        <Link to="/services" className="btn">Learn More <i className="ti ti-arrow-right"></i></Link>
                         <img src="/img/bg-img/91.png" alt=""/>
                      </div>
                      <div className="service-content">
@@ -129,7 +129,7 @@ export default function ServicesHeader() {
                         <img src="/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
-                        <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
+                        <Link to="/services" className="btn">Learn More <i className="ti ti-arrow-right"></i></Link>
                         <img src="/img/bg-img/92.png" alt=""/>
                      </div>
                      <div className="service-content">
@@ -148,7 +148,7 @@ export default function ServicesHeader() {
                         <img src="/img/core-img/shape7.png" alt=""/>
                      </div>
                      <div className="service-thumb">
-                        <a href="#" className="btn">Learn More <i className="ti ti-arrow-right"></i></a>
+                       <Link to="/services" className="btn">Learn More <i className="ti ti-arrow-right"></i></Link>
                         <img src="/img/bg-img/93.png" alt=""/>
                      </div>
                      <div className="service-content">
