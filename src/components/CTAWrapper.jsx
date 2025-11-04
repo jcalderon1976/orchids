@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function CTAWrapper() {
     return (
         <div className="cta-wrapper bg-img" style={{backgroundImage: "url(/img/core-img/grid.jpg)"}}>
@@ -15,8 +16,8 @@ export default function CTAWrapper() {
                   <p className="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">Communicate your pricing
                      clearly and transparently to build trust with your customers. Hidden fees or
                      unclear pricing structures can lead to dissatisfaction.</p>
-                  <a href="/contact" className="btn btn-primary btn-hover-border wow fadeInUp" data-wow-duration="1000ms"
-                     data-wow-delay="800ms">Get Started <i className="ti ti-arrow-up-right"></i></a>
+                  <Link to="/contact" className="btn btn-primary btn-hover-border wow fadeInUp" data-wow-duration="1000ms"
+                     data-wow-delay="800ms">Get Started <i className="ti ti-arrow-up-right"></i></Link>
                </div>
             </div>
          </div>

@@ -57,11 +57,11 @@ export default function Footer() {
 
                  {/*  <!-- Footer Nav --> */}
                   <ul className="footer-nav">
-                     <li><a href="#">Artificial Intelligence & LLM </a></li>
-                     <li><a href="#">App Development</a></li>
-                     <li><a href="#">Process & Workflow Automation</a></li>
-                     <li><a href="#">UI/UX Design</a></li>
-                     <li><a href="#">Digital Transformation</a></li>
+                     <li><Link href="/services">Artificial Intelligence & LLM </Link></li>
+                     <li><Link href="/services">App Development</Link></li>
+                     <li><Link href="/services">Process & Workflow Automation</Link></li>
+                     <li><Link href="/services">UI/UX Design</Link></li>
+                     <li><Link href="/services">Digital Transformation</Link></li>
                   </ul>
                </div>
             </div>
