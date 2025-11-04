@@ -12,9 +12,9 @@ export default function Contact() {
         const form = e.target;
         const data = new FormData();
         
-        // Obtener valores del formulario
-        data.append('fullName', form.name.value || '');
-        data.append('phoneNumber', form.phone.value || '');
+        // Obtener valores del formulario - usar los nombres que espera PHP
+        data.append('full-name', form.name.value || '');
+        data.append('phone-number', form.phone.value || '');
         data.append('email', form.email.value || '');
         data.append('message', form.message.value || '');
     
@@ -23,16 +23,22 @@ export default function Contact() {
           body: data
         })
           .then(response => {
-            if (response.ok) {
-              setSubmitted(true);
-              form.reset(); // Limpiar el formulario después del envío exitoso
-            } else {
-              alert('Error sending message');
-            }
+            return response.text().then(text => {
+              // Verificar el código de estado HTTP y el contenido de la respuesta
+              if (response.ok && (text.includes('Thank You') || text.includes('sent'))) {
+                setSubmitted(true);
+                form.reset(); // Limpiar el formulario después del envío exitoso
+              } else {
+                // Mostrar el mensaje de error del servidor
+                alert('Error: ' + text);
+                setSubmitted(false);
+              }
+            });
           })
           .catch(error => {
             console.error('Error:', error);
-            alert('Error sending message');
+            alert('Error sending message. Please try again.');
+            setSubmitted(false);
           });
       };
 
