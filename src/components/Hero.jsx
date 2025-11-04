@@ -18,8 +18,8 @@ export default function Hero() {
   
                  <div className="col-12 col-md-6 col-xl-5 offset-xl-1 col-xxl-4 offset-xxl-1">
                     <p className="text-white wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-                   At Orchid Technology,  we build scalable, flexible, secure, and AI-driven solutions that empower enterprises to grow faster and smarter.
-                   We are dedicated transforming your digital aspirations into reality. With a passion for innovation and a commitment to excellence.
+                     At Orchid Technology,  we build scalable, flexible, secure, and AI-driven solutions that empower enterprises to grow faster and smarter.
+                     We are dedicated transforming your digital aspirations into reality. With a passion for innovation and a commitment to excellence.
                     </p>
                     <Link to="/services" className="btn border-2 btn-outline-light wow fadeInUp" data-wow-duration="1000ms"
                        data-wow-delay="800ms" >Our Services <i className="ti ti-arrow-up-right"></i></Link>
