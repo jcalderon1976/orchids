@@ -1,5 +1,87 @@
-import { Link } from 'react-router-dom';
-export default function ServicesHeader() {
+import { Link, useSearchParams } from 'react-router-dom';
+import { useEffect, useRef, useCallback } from "react";
+import DTservices from "./DTservices";
+import AIServices from "./AIServices";
+import RPAServices from "./RPAServices";
+import ADMServices from "./ADMServices";
+
+export default function ServiceDetails() {
+
+    const [searchParams] = useSearchParams();
+    const initializedRef = useRef(false);
+
+    // Función para activar un tab específico
+    const activateTab = useCallback((tabId) => {
+        const tab = document.getElementById(tabId + '-tab');
+        const pane = document.getElementById(tabId);
+        const wrapper = document.querySelector('.service-details-tab-content-wrapper');
+
+        if (tab && pane) {
+            // Remover 'active' de todos los tabs
+            document.querySelectorAll('.service-nav-item').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+
+            // Remover 'show active' de todos los panes
+            document.querySelectorAll('.tab-pane').forEach(p => {
+                p.classList.remove('show', 'active');
+            });
+
+            // Activar el tab seleccionado
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+
+            // Activar el pane seleccionado
+            pane.classList.add('show', 'active');
+
+            // Ajustar la altura del wrapper basándose en el contenido activo
+            if (wrapper) {
+                // Pequeño delay para asegurar que el contenido se haya renderizado
+                setTimeout(() => {
+                    const paneHeight = pane.scrollHeight;
+                    wrapper.style.height = `${paneHeight}px`;
+                }, 50);
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        // Obtener el parámetro 'tab' de la URL
+        const tabParam = searchParams.get('tab');
+        
+        // Mapear los valores del parámetro a los IDs de los tabs
+        const tabMap = {
+            'ai': 'v-pills-ai',
+            'rpa': 'v-pills-rpa',
+            'adm': 'v-pills-adm',
+            'digital-transformation': 'v-pills-digital-transformation'
+        };
+
+        // Determinar qué tab activar (por defecto: digital-transformation)
+        const tabToActivate = tabMap[tabParam] || 'v-pills-digital-transformation';
+
+        // Activar el tab seleccionado cuando se monte el componente o cambie el parámetro
+        const timer = setTimeout(() => {
+            activateTab(tabToActivate);
+            initializedRef.current = true;
+            
+            // Asegurar que la altura del wrapper se ajuste después de la activación
+            const wrapper = document.querySelector('.service-details-tab-content-wrapper');
+            const activePane = document.querySelector('.service-details-tab-content-wrapper .tab-pane.show.active');
+            if (wrapper && activePane) {
+                setTimeout(() => {
+                    wrapper.style.height = `${activePane.scrollHeight}px`;
+                }, 150);
+            }
+        }, 100);
+
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [activateTab, searchParams]);
+
+
     return (
       <div>
             
@@ -30,86 +112,118 @@ export default function ServicesHeader() {
                 <div className="container">
                     <div className="row g-5 g-lg-4 g-xxl-5">
                         <div className="col-12 col-lg-8">
-                        <div className="service-details-content">
-                            <img src="/img/bg-img/128.jpg" alt=""/>
-                            <h2 className="display-5 fw-semibold">Web Development</h2>
-                            <p>When an unknown printer took ar galley offer type year anddey scrambled make aewer specimen a book
-                                bethas survived not only five when anner year unknown printer eed little help from friend from time
-                                to time. Although we offer the one-stop convenience. unknown printer took galley type year anddey
-                                unknown printer took scrambled.</p>
-
-                            <p>When an unknown printer took ar galley offer type year anddey scrambled make aewer specimen a book
-                                bethas survived not only five when anner year unknown printer eed little help from friend from time
-                                to time. Although we offer the one-stop convenience. unknown printer took galley type year unknown
-                                printer took galley anddey scrambled.</p>
-
-                            <ul className="list-unstyled">
-                                <li><svg className="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <g clipPath="url(#clip0_1_15228)">
-                                        <path fillRule="evenodd" clipRule="evenodd"
-                                            d="M12 24C5.37364 24 0 18.6264 0 12C0 5.37364 5.37364 0 12 0C18.6264 0 24 5.37364 24 12C24 18.6264 18.6264 24 12 24ZM10.349 14.1114L17.5501 6.91039C17.7993 6.66113 18.2084 6.66369 18.4552 6.91039L19.2717 7.72696C19.5184 7.97367 19.5184 8.38535 19.2717 8.63197L10.8142 17.0896C10.6629 17.2409 10.4504 17.3004 10.2513 17.2662C10.1151 17.2491 9.98362 17.1893 9.88101 17.0868L4.72904 11.9348C4.4828 11.6886 4.47987 11.279 4.72904 11.0297L5.54561 10.2131C5.79487 9.96397 6.20145 9.96397 6.45071 10.2131L10.349 14.1114Z"
-                                            fill="#601FEB" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1_15228">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                    </svg> Sed nisl fusce est consequat mollis habitasse facilisi rutrum nisle.</li>
-
-                                <li><svg className="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <g clipPath="url(#clip0_1_152298)">
-                                        <path fillRule="evenodd" clipRule="evenodd"
-                                            d="M12 24C5.37364 24 0 18.6264 0 12C0 5.37364 5.37364 0 12 0C18.6264 0 24 5.37364 24 12C24 18.6264 18.6264 24 12 24ZM10.349 14.1114L17.5501 6.91039C17.7993 6.66113 18.2084 6.66369 18.4552 6.91039L19.2717 7.72696C19.5184 7.97367 19.5184 8.38535 19.2717 8.63197L10.8142 17.0896C10.6629 17.2409 10.4504 17.3004 10.2513 17.2662C10.1151 17.2491 9.98362 17.1893 9.88101 17.0868L4.72904 11.9348C4.4828 11.6886 4.47987 11.279 4.72904 11.0297L5.54561 10.2131C5.79487 9.96397 6.20145 9.96397 6.45071 10.2131L10.349 14.1114Z"
-                                            fill="#601FEB" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1_152298">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                    </svg> Cubilia quisque ad accumsan lorem platea elementum nisl curabitur dapibus.</li>
-
-                                <li><svg className="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <g clipPath="url(#clip0_1_152128)">
-                                        <path fillRule="evenodd" clipRule="evenodd"
-                                            d="M12 24C5.37364 24 0 18.6264 0 12C0 5.37364 5.37364 0 12 0C18.6264 0 24 5.37364 24 12C24 18.6264 18.6264 24 12 24ZM10.349 14.1114L17.5501 6.91039C17.7993 6.66113 18.2084 6.66369 18.4552 6.91039L19.2717 7.72696C19.5184 7.97367 19.5184 8.38535 19.2717 8.63197L10.8142 17.0896C10.6629 17.2409 10.4504 17.3004 10.2513 17.2662C10.1151 17.2491 9.98362 17.1893 9.88101 17.0868L4.72904 11.9348C4.4828 11.6886 4.47987 11.279 4.72904 11.0297L5.54561 10.2131C5.79487 9.96397 6.20145 9.96397 6.45071 10.2131L10.349 14.1114Z"
-                                            fill="#601FEB" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1_152128">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                    </svg> Egestas magnis sapien hack vehicula condimentum dui enim justo site.</li>
-                            </ul>
-
-                            <div className="row g-4">
-                                <div className="col-6">
-                                    <img src="/img/bg-img/129.jpg" alt=""/>
+                            <div id="v-pills-tabContent" className="service-details-tab-content-wrapper">
+                                <div className="service-details-content tab-pane fade" id="v-pills-digital-transformation" role="tabpanel" aria-labelledby="v-pills-digital-transformation-tab">
+                                    <DTservices />
                                 </div>
-                                <div className="col-6">
-                                    <img src="/img/bg-img/130.jpg" alt=""/>
+                                <div className="service-details-content tab-pane fade" id="v-pills-ai" role="tabpanel" aria-labelledby="v-pills-ai-tab">
+                                    <AIServices />
                                 </div>
+                                <div className="service-details-content tab-pane fade" id="v-pills-rpa" role="tabpanel" aria-labelledby="v-pills-rpa-tab">
+                                   <RPAServices/>
+                                </div>
+                                <div className="service-details-content tab-pane fade" id="v-pills-adm" role="tabpanel" aria-labelledby="v-pills-adm-tab">
+                                   <ADMServices/>
+                                </div>
+                                
                             </div>
-                            <p>When an unknown printer took ar galley offer type year anddey scrambled make aewer specimen a book
-                                bethas survived not only five when anner year unknown printer eed little help from friend from time
-                                to time. Although we offer the one-stop convenience. unknown printer took galley type year anddey
-                                unknown printer took scrambled.</p>
-                        </div>
                         </div>
 
                         <div className="col-12 col-lg-4">
                         <div className="service-sidebar">
                             {/* <!-- All Service -->*/}
-                            <div className="all-service-card">
+                            <div className="all-service-card" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                 <ul className="p-0 list-unstyled">
-                                    <li><Link to="/services"><span>IT Strategy & Planning</span> <i className="ti ti-chevron-right"></i></Link></li>
-                                    <li><Link to="/services"><span>Machine Learning</span> <i className="ti ti-chevron-right"></i></Link></li>
-                                    <li><Link to="/services"><span>Cloud Consulting</span> <i className="ti ti-chevron-right"></i></Link></li>
-                                    <li><Link to="/services"><span>Web Development</span> <i className="ti ti-chevron-right"></i></Link></li>
-                                    <li><Link to="/services"><span>Database Security</span> <i className="ti ti-chevron-right"></i></Link></li>
-                                    <li><Link to="/services"><span>IT Management</span> <i className="ti ti-chevron-right"></i></Link></li>
+                                    <li>
+                                       <div 
+                                            className="service-nav-item"        
+                                            id="v-pills-digital-transformation-tab"                                                                             
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-digital-transformation"                                                                    
+                                            role="tab"
+                                            aria-controls="v-pills-digital-transformation"                                                                      
+                                            aria-selected="true"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                activateTab('v-pills-digital-transformation');
+                                            }}
+                                        >
+                                           <Link 
+                                                to="/service-details" 
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                <span>DIGITAL TRANSFORMATION</span> <i className="ti ti-chevron-right"></i>
+                                            </Link>       
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div 
+                                            className="service-nav-item"       
+                                            id="v-pills-ai-tab"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-ai"        
+                                            role="tab"
+                                            aria-controls="v-pills-ai"
+                                            aria-selected="false"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                activateTab('v-pills-ai');
+                                            }}
+                                        >
+                                           <Link 
+                                                to="/service-details" 
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                <span>TECHNOLOGY AND ARTIFICIAL INTELLIGENCE (AI)</span> <i className="ti ti-chevron-right"></i>
+                                            </Link>                                                                  
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div 
+                                            className="service-nav-item"       
+                                            id="v-pills-rpa-tab"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-rpa"        
+                                            role="tab"
+                                            aria-controls="v-pills-rpa"
+                                            aria-selected="false"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                activateTab('v-pills-rpa');
+                                            }}
+                                        >
+                                           <Link 
+                                                to="/service-details" 
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                <span>ROBOTIC PROCESS AUTOMATION (RPA)</span> <i className="ti ti-chevron-right"></i>
+                                            </Link>                                                                  
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div 
+                                            className="service-nav-item"       
+                                            id="v-pills-adm-tab"
+                                            data-bs-toggle="pill"
+                                            data-bs-target="#v-pills-adm"        
+                                            role="tab"
+                                            aria-controls="v-pills-adm"
+                                            aria-selected="false"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                activateTab('v-pills-adm');
+                                            }}
+                                        >
+                                           <Link 
+                                                to="/service-details" 
+                                                onClick={(e) => e.preventDefault()}
+                                            >
+                                                <span>APPLICATION DEVELOPMENT & MODERNIZATION </span> <i className="ti ti-chevron-right"></i>
+                                            </Link>                                                                  
+                                        </div>
+                                    </li>
+                                
+                                  
                                 </ul>
                             </div>
 
@@ -130,7 +244,7 @@ export default function ServicesHeader() {
                                     </div>
                                     <div>
                                         <p className="mb-1">Call Us</p>
-                                        <h5 className="mb-0">+123 456 7890</h5>
+                                        <h5 className="mb-0">+787 429.7834</h5>
                                     </div>
                                     </div>
 
@@ -143,7 +257,7 @@ export default function ServicesHeader() {
                                     </div>
                                     <div>
                                         <p className="mb-1">Mail Us</p>
-                                        <h5 className="mb-0">info@example.com</h5>
+                                        <h5 className="mb-0">info@orchidspr.com</h5>
                                     </div>
                                     </div>
 
@@ -156,42 +270,13 @@ export default function ServicesHeader() {
                                     </div>
                                     <div>
                                         <p className="mb-1">Office Address</p>
-                                        <h5 className="mb-0">125 Berlin, Germany</h5>
+                                        <h5 className="mb-0">St2 GHE Guaynabo, PR 00966</h5>
                                     </div>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* <!-- Download -->*/}
-                            <div className="download-card">
-                                <h4 className="mb-4 fw-bold">Download Brochure</h4>
-
-                                <a href="#" className="btn btn-primary w-100 mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none">
-                                    <path
-                                        d="M7.79297 21.25H16.209C17.1372 21.25 18.0275 20.8813 18.6838 20.2249C19.3402 19.5685 19.709 18.6783 19.709 17.75V12.22C19.7093 11.2919 19.341 10.4016 18.685 9.745L12.716 3.775C12.3909 3.45 12.0051 3.19221 11.5804 3.01634C11.1558 2.84047 10.7006 2.74997 10.241 2.75H7.79297C6.86471 2.75 5.97447 3.11875 5.3181 3.77513C4.66172 4.4315 4.29297 5.32174 4.29297 6.25V17.75C4.29297 18.6783 4.66172 19.5685 5.3181 20.2249C5.97447 20.8813 6.86471 21.25 7.79297 21.25Z"
-                                        stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path
-                                        d="M11.6895 3.10999V8.76999C11.6895 9.30042 11.9002 9.80913 12.2752 10.1842C12.6503 10.5593 13.159 10.77 13.6895 10.77H19.3515"
-                                        stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path
-                                        d="M7.25 16.5V15.5M7.25 15.5V13.5H8.25C8.51522 13.5 8.76957 13.6054 8.95711 13.7929C9.14464 13.9804 9.25 14.2348 9.25 14.5C9.25 14.7652 9.14464 15.0196 8.95711 15.2071C8.76957 15.3946 8.51522 15.5 8.25 15.5H7.25ZM15.25 16.5V15.25M15.25 15.25V13.5H16.75M15.25 15.25H16.75M11.25 16.5V13.5H11.75C12.1478 13.5 12.5294 13.658 12.8107 13.9393C13.092 14.2206 13.25 14.6022 13.25 15C13.25 15.3978 13.092 15.7794 12.8107 16.0607C12.5294 16.342 12.1478 16.5 11.75 16.5H11.25Z"
-                                        stroke="white" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg> DOWNLOAD PDF</a>
-
-                                <a href="#" className="btn btn-light bg-white w-100"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none">
-                                    <path
-                                        d="M20.9998 14.016C20.9538 13.024 20.2768 13 19.3568 13C17.9408 13 17.7058 13.338 17.7058 14.667V16.333C17.7058 17.662 17.9408 18 19.3568 18C20.2768 18 20.9538 17.976 20.9998 16.984M10.2948 15.5C10.2948 16.88 9.1888 18 7.8248 18C7.5158 18 7.3618 18 7.2478 17.933C6.9728 17.773 7.0008 17.448 7.0008 17.167V13.833C7.0008 13.552 6.9728 13.227 7.2478 13.067C7.3618 13 7.5158 13 7.8238 13C9.1888 13 10.2938 14.12 10.2938 15.5M13.9998 18C13.2238 18 12.8348 18 12.5938 17.756C12.3528 17.512 12.3528 17.119 12.3528 16.333V14.667C12.3528 13.881 12.3528 13.488 12.5938 13.244C12.8348 13 13.2238 13 13.9998 13C14.7758 13 15.1648 13 15.4058 13.244C15.6468 13.488 15.6468 13.881 15.6468 14.667V16.333C15.6468 17.119 15.6468 17.512 15.4058 17.756C15.1648 18 14.7758 18 13.9998 18Z"
-                                        stroke="#222222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path
-                                        d="M15 22H10.727C7.467 22 5.835 22 4.703 21.202C4.38085 20.9761 4.0929 20.705 3.848 20.397C3 19.331 3 17.797 3 14.727V12.182C3 9.219 3 7.737 3.469 6.554C4.223 4.651 5.817 3.151 7.839 2.441C9.095 2 10.668 2 13.818 2C15.616 2 16.516 2 17.234 2.252C18.389 2.658 19.3 3.515 19.731 4.602C20 5.278 20 6.125 20 7.818V10"
-                                        stroke="#222222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path
-                                        d="M3 12C3 11.116 3.35115 10.2683 3.97621 9.64321C4.60127 9.01815 5.44903 8.667 6.333 8.667C6.999 8.667 7.784 8.783 8.431 8.61C8.71371 8.53392 8.97145 8.38485 9.17838 8.17774C9.38531 7.97064 9.53416 7.71277 9.61 7.43C9.783 6.783 9.667 5.998 9.667 5.332C9.66726 4.44821 10.0185 3.6007 10.6436 2.97586C11.2686 2.35102 12.1162 2 13 2"
-                                        stroke="#222222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg> DOWNLOAD PDF</a>
-                            </div>
+                           
                         </div>
                         </div>
                     </div>

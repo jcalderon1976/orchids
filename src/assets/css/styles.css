@@ -3010,6 +3010,47 @@ picture.jarallax-img img {
 .service-details-content ul li:last-child {
   margin-bottom: 0;
 }
+/* Asegurar que los SVGs dentro de las listas sean visibles */
+.service-details-content ul li svg {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Service Details Tab Content Wrapper - Superponer tabs en la misma posición */
+.service-details-tab-content-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 400px; /* Altura mínima para evitar colapso */
+}
+
+.service-details-tab-content-wrapper .tab-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 0;
+}
+
+.service-details-tab-content-wrapper .tab-pane.show.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 1;
+}
+/* Asegurar que los SVGs dentro de los panes activos sean visibles */
+.service-details-tab-content-wrapper .tab-pane.show.active svg {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
 
 .service-sidebar {
   display: -webkit-box;
@@ -7278,4 +7319,39 @@ textarea.form-control {
 
 .spaceBottom{
   height: 100px !important;
+}
+
+/* Description Section - Show bullets for lists */
+/* Higher specificity to override .service-details-content ul li */
+.service-details-content .description-section ul,
+.description-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 1rem;
+}
+
+.service-details-content .description-section ul li,
+.description-section ul li {
+  list-style-type: disc;
+  display: list-item !important;
+  margin-bottom: 0.5rem;
+  align-items: unset;
+  gap: unset;
+}
+
+.service-details-content .description-section ul ul,
+.description-section ul ul {
+  list-style-type: circle;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-details-content .description-section ul ul li,
+.description-section ul ul li {
+  list-style-type: circle;
+  display: list-item !important;
+}
+
+.description-section{
+  
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import AiSvg from "./AiSvg.jsx";
 import WorkflowAutomationSvg from "./WorkflowAutomation.jsx";
 import EnterpriseSolutionSvg from "./EnterpriseSolution.jsx";
@@ -83,8 +84,7 @@ export default function ServiceSession() {
          <div className="row g-4 g-xl-5">
           {/*   <!-- Service Nav --> */}
             <div className="col-12 col-md-5 col-lg-4">
-               <div className="service-nav nav flex-column" id="v-pills-tab" role="tablist" 
-               aria-orientation="vertical">
+               <div className="service-nav nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                   <AiSvg />
                   <WorkflowAutomationSvg />
                   <EnterpriseSolutionSvg />
@@ -112,7 +112,7 @@ export default function ServiceSession() {
                               <li><i className="ti ti-circle-check"></i> AI Strategy & Consulting</li>
                               <li><i className="ti ti-circle-check"></i> Machine Learning Development</li>
                            </ul>
-                           <a className="btn btn-primary" href="#">Read More <i className="ti ti-arrow-up-right"></i></a>
+                           <Link className="btn btn-primary" to="/service-details?tab=ai">Read More <i className="ti ti-arrow-up-right"></i></Link>
                         </div>
                      </div>
                   </div>
@@ -134,7 +134,7 @@ export default function ServiceSession() {
                               <li><i className="ti ti-circle-check"></i> Rule-based tasks</li>
                               <li><i className="ti ti-circle-check"></i> Integrates systems</li>
                            </ul>
-                           <a className="btn btn-primary" href="#">Read More <i className="ti ti-arrow-up-right"></i></a>
+                           <Link className="btn btn-primary" to="/service-details?tab=rpa">Read More <i className="ti ti-arrow-up-right"></i></Link>
                         </div>
                      </div>
                   </div>
@@ -155,7 +155,7 @@ export default function ServiceSession() {
                               <li><i className="ti ti-circle-check"></i> Configuring the software,</li>
                               <li><i className="ti ti-circle-check"></i> Migrating data and deploying the system</li>
                            </ul>
-                           <a className="btn btn-primary" href="#">Read More <i className="ti ti-arrow-up-right"></i></a>
+                           <Link className="btn btn-primary" to="/service-details?tab=adm">Read More <i className="ti ti-arrow-up-right"></i></Link>
                         </div>
                      </div>
                   </div>
@@ -176,7 +176,7 @@ export default function ServiceSession() {
                               <li><i className="ti ti-circle-check"></i> Cloud Migration & Implementation</li>
                               <li><i className="ti ti-circle-check"></i> Data Analytics & Insights</li>
                            </ul>
-                           <a className="btn btn-primary" href="#">Read More <i className="ti ti-arrow-up-right"></i></a>
+                           <Link className="btn btn-primary" to="/service-details?tab=digital-transformation">Read More <i className="ti ti-arrow-up-right"></i></Link>
                         </div>
                      </div>
                   </div>
